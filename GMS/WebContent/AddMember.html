@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/validations/validation.js">
+</script>
+</head>
+<body>
+	<form action="AddMemberServlet" method="post" name="formfd" >
+		<fieldset>
+			<legend align="left">Personal Details</legend>
+			<table> 
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" name="membername"  onkeyup="return clearMethod()" onkeypress="return lettersOnly(event)"></td>
+					<td>
+					<span id="errormembername"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Date of birth:</td>
+					<td><input type="text" name="dob" placeholder="mm/dd/year" onkeyup="return clearMethod()" onkeypress="return isNumbers(event)" ></td>
+					<td>
+					<span id="errordob"></span> 
+				</tr>
+				<tr>
+					<td>Mobile No</td>
+					<td><input type="text" name="mobileno"   maxlength="10" onkeyup="return clearMethod()"  onkeypress="return isNumber(event) "></td>
+					<td>
+					<span id="errormobileno"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>E-Mail:</td>
+					<td><input type="email" name="email" onkeyup="return clearMethod()"></td>
+					<td>
+					<span id="erroremail"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Address1:</td>
+					<td><input type="text" name="address1" onkeyup="return clearMethod()"></td>
+					<td>
+					<span id="erroraddress1"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Address2:</td>
+					<td><input type="text" name="address2" onkeyup="return clearMethod()"></td>
+						<td>
+					<span id="erroraddress2"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Date Of Joining:</td>
+					<td><input type="date" name="doj" placeholder="mm/dd/year" onkeyup="return clearMethod()" onkeypress="return isNumbers(event) "></td>
+						<td>
+					<span id="errordoj"></span>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend align="left">Physical Details</legend>
+			<table>
+				<tr>
+					<td>Height:</td>
+					<td><input type="text" name="mem_height" placeholder="cms" onkeypress="return isNumber(event)"></td>
+					<td>Upper Abdomen:</td>
+					<td><input type="text" name="mem_uprabdomen" onkeypress="return isNumber(event)" ></td>
+				</tr>
+				<tr>
+					<td>Weight:</td>
+					<td><input type="text" name="mem_weight" placeholder="kg" onkeypress="return isNumber(event)"></td>
+					<td>Waist:</td>
+					<td><input type="text" name="mem_waist" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>B.P- Heart + Rate:</td>
+					<td><input type="text" name="mem_bp" onkeypress="return isNumber(event)"></td>
+					<td>Lower Abdomen:</td>
+					<td><input type="text" name="mem_lwrabdomen" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>Neck:</td>
+					<td><input type="text" name="mem_neck" onkeypress="return isNumber(event)"></td>
+					<td>Hips:</td>
+					<td><input type="text" name="mem_hips" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>Shoulder Width:</td>
+					<td><input type="text" name="mem_shoulder" onkeypress="return isNumber(event)"></td>
+					<td>Thigh:</td>
+					<td><input type="text" name="mem_thigh" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>Chest:</td>
+					<td><input type="text" name="mem_chest" onkeypress="return isNumber(event)"></td>
+					<td>Calf:</td>
+					<td><input type="text" name="mem_calf" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>Right Arm:</td>
+					<td><input type="text" name="mem_rightarm" onkeypress="return isNumber(event)"></td>
+					<td>Body Fat:</td>
+					<td><input type="text" name="mem_bodyfat" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>Left Arm:</td>
+					<td><input type="text" name="mem_leftarm" onkeypress="return isNumber(event)"></td>
+					<td>L.B.M :</td>
+					<td><input type="text" name="mem_LBM" onkeypress="return isNumber(event)"></td>
+				</tr>
+				<tr>
+					<td>Fore Arm:</td>
+					<td><input type="text" name="mem_forearm" onkeypress="return isNumber(event)"></td>
+					<td>B.M.R :</td>
+					<td><input type="text" name="mem_BMR" onkeypress="return isNumber(event)"></td>
+					<td>B.M.J :</td>
+					<td><input type="text" name="mem_BMJ" onkeypress="return isNumber(event)"></td>
+				</tr>
+			</table>
+		</fieldset>
+		<table>
+		<tr>
+		<td>
+		<input type="submit" name="submit" value="Register" onclick="return validate()">
+		</td>
+		<td>
+		<input type="reset" name="reset" value="Clear">
+		</td>
+		</tr>
+		</table>
+	</form>
+
+</body>
+</html>
